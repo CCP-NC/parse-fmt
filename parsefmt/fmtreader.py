@@ -77,9 +77,10 @@ class FMTReader(object):
             self.legend = ''
 
         # Expunge body
+        datare = re.compile('([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9.-]+)')
         self._raw = np.array([l.strip().split()
                               for l in self._contents[h1+1:]
-                              if l.strip() != ''])
+                              if datare.search(l.strip()) is not None])
 
         # Check on shape
         if len(self._raw.shape) != 2:
