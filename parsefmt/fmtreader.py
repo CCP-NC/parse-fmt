@@ -135,5 +135,5 @@ if __name__ == '__main__':
     print(fr.grid)
     print(fr.legend)
     print(fr.data.shape)
-    print(fr.fxyz[:,:3,0,0].T)
-    print(fr.xyz[:,:3,0,0].T)
+    print(fr.fxyz[:, :3, 0, 0].T)
+    print(fr.xyz[:, :3, 0, 0].T)
