@@ -23,7 +23,7 @@ as the grid it is defined on, as members."""
 
 if __name__ == '__main__':
     setup(name='parse-fmt',
-          version='0.5',
+          version='0.5.1',
           description='A Python parser for CASTEP fmt files (densities, '
           'potentials etc.)',
           long_description=long_description,
