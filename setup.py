@@ -14,12 +14,20 @@ from __future__ import print_function
 
 from setuptools import setup, find_packages
 
+long_description = """
+parse-fmt is a small library meant to parse .fmt files, the default format
+used by the ab-initio software CASTEP (http://www.castep.org/) to write out
+volumetric data such as electronic densities. parse-fmt provides the class
+FMTReader, which allows to read a .fmt file and stores its data, as well
+as the grid it is defined on, as members."""
+
 if __name__ == '__main__':
     setup(name='parse-fmt',
           version='0.5',
           description='A Python parser for CASTEP fmt files (densities, '
           'potentials etc.)',
-          url='https://github.com/CCP-NC/make-supercell',
+          long_description=long_description,
+          url='https://github.com/CCP-NC/parse-fmt',
           author='Simone Sturniolo',
           author_email='simone.sturniolo@stfc.ac.uk',
           license='MIT',
@@ -38,14 +46,17 @@ if __name__ == '__main__':
               # Pick your license as you wish (should match "license" above)
               'License :: OSI Approved :: MIT License',
 
-              # Specify the Python versions you support here. In particular, ensure
-              # that you indicate whether you support Python 2, Python 3 or
-              # both.
+              # Specify the Python versions you support here. In particular,
+              # ensure that you indicate whether you support Python 2,
+              # Python 3 or both.
               'Programming Language :: Python :: 2',
               'Programming Language :: Python :: 2.7',
               'Programming Language :: Python :: 3',
           ],
           keywords='crystallography ccpnc computational chemistry',
           packages=find_packages(),
-          python_requires='>=2.7'
+          python_requires='>=2.7',
+          install_requires=[
+              'numpy',
+          ],
           )
