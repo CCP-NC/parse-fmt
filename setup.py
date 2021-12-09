@@ -23,7 +23,7 @@ as the grid it is defined on, as members."""
 
 if __name__ == '__main__':
     setup(name='parse-fmt',
-          version='0.5.1',
+          version='0.5.2',
           description='A Python parser for CASTEP fmt files (densities, '
           'potentials etc.)',
           long_description=long_description,
@@ -31,6 +31,7 @@ if __name__ == '__main__':
           author='Simone Sturniolo',
           author_email='simone.sturniolo@stfc.ac.uk',
           license='MIT',
+          license_files=('LICENSE',),
           classifiers=[
               # How mature is this project? Common values are
               #   3 - Alpha
